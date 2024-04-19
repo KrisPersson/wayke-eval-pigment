@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { OpenSauceOne } from "./fonts/index";
+import "@pigment-css/react/styles.css";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { css } from "@pigment-css/react";
+import Header from "./components/Header/index";
 
 export const metadata: Metadata = {
   title: "Wayke Pigment CSS Evaluation",
   description: "Project to test and evaluate Pigment CSS",
 };
+
+const bodyClass = css({
+  margin: 0,
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+});
 
 export default function RootLayout({
   children,
@@ -16,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${OpenSauceOne.className} ${bodyClass}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
