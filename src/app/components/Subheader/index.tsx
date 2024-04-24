@@ -1,9 +1,14 @@
 import { css } from "@pigment-css/react";
 import Container from "../Container/index";
 import { size } from "../../layout/helpers";
+import Breadcrumbs from "../Breadcrumbs/index";
+import AnchorLinks from "../AnchorLinks/index";
+import { IBreadcrumb, IAnchorLink } from "../../types/index";
 
 interface IPageHeaderProps {
   pageName: string;
+  breadcrumbs: IBreadcrumb[];
+  anchorLinks: IAnchorLink[];
 }
 
 const wrapperClass = css({
@@ -31,14 +36,18 @@ const hrClass = css({
   marginTop: `${size(3)}`,
 });
 
-export default function Subheader({ pageName }: IPageHeaderProps) {
+export default function Subheader({
+  pageName,
+  breadcrumbs,
+  anchorLinks,
+}: IPageHeaderProps) {
   return (
     <div className={wrapperClass} aria-label="Page Header">
       <Container>
         <div className={innerClass}>
-          <div>Breadcrumbs</div>
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
           <h1 className={headingClass}>{pageName}</h1>
-          <div>Anchor Links</div>
+          <AnchorLinks anchorLinks={anchorLinks} />
         </div>
         <hr className={hrClass} />
       </Container>

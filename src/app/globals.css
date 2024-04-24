@@ -1,5 +1,5 @@
 :root {
-    --gutter: 16px;
+    --gutter: 20px;
     --subheader-gap: 32px;
 
     @media (min-width: 1300px) {

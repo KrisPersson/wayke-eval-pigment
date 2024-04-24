@@ -3,9 +3,14 @@ import { UlGrid } from "../components/Grid/index";
 import { css, styled } from "@pigment-css/react";
 import CardProduct from "../components/CardProduct/index";
 import CardBrand from "../components/CardBrand/index";
+import CardTrialRuns from "../components/CardTrialRuns/index";
 import { elbilar } from "../data/products";
 import { trademarks } from "../data/trademarks";
+import { provkorningar } from "../data/trial-runs";
 import { parsePrice } from "../layout/helpers";
+import Subheader from "../components/Subheader/index";
+import { anchorLinks } from "./anchor-links";
+import { crumbs } from "./breadcrumbs";
 
 const GridListCardProducts = styled(UlGrid)`
   > * {
@@ -19,6 +24,12 @@ const GridListCardBrands = styled(UlGrid)`
   }
 `;
 
+const GridListCardTrialRuns = styled(UlGrid)`
+  > * {
+    grid-column: auto / span 6;
+  }
+`;
+
 const overflowControlClass = css({
   overflow: "scroll",
 });
@@ -28,7 +39,7 @@ const popModelsProducts = elbilar.popular.map((item, i: number) => {
     <li key={i}>
       <CardProduct
         imgSrc={`/photos/cars/electric/${item.imgSrc}`}
-        imgAlt={`Image of a ${item.model}`}
+        imgAlt={`Image of a ${item.model} with a scenic background`}
         title={item.model}
         numListings={item.numListings}
         lowestPrice={parsePrice(item.lowestPrice) as string}
@@ -42,7 +53,7 @@ const goFarModelsProducts = elbilar.goFar.map((item, i: number) => {
     <li key={i}>
       <CardProduct
         imgSrc={`/photos/cars/electric/${item.imgSrc}`}
-        imgAlt={`Image of a ${item.model}`}
+        imgAlt={`Image of a ${item.model} with a scenic background`}
         title={item.model}
         numListings={item.numListings}
         lowestPrice={parsePrice(item.lowestPrice) as string}
@@ -50,12 +61,13 @@ const goFarModelsProducts = elbilar.goFar.map((item, i: number) => {
     </li>
   );
 });
+
 const trademarkBrands = trademarks.map((item, i: number) => {
   return (
     <li key={i}>
       <CardBrand
         imgSrc={`/icons/trademarks/${item.iconSrc}`}
-        imgAlt={`${item.name}`}
+        imgAlt={`${item.name} with a scenic background`}
         title={item.name}
         numCars={item.numCars}
         numModels={item.numModels}
@@ -64,9 +76,26 @@ const trademarkBrands = trademarks.map((item, i: number) => {
   );
 });
 
+const trialRuns = provkorningar.map((item, i: number) => {
+  return (
+    <li key={i}>
+      <CardTrialRuns
+        imgSrc={`/photos/trialruns/${item.imgSrc}`}
+        imgAlt={`${item.model}`}
+        title={item.model}
+      />
+    </li>
+  );
+});
+
 export default function Elbilar() {
   return (
     <Page>
+      <Subheader
+        pageName="Elbil"
+        breadcrumbs={crumbs}
+        anchorLinks={anchorLinks}
+      />
       <PageSection id="section-popular-models" heading="Populära modeller">
         <div className={overflowControlClass}>
           <GridListCardProducts>
@@ -102,6 +131,17 @@ export default function Elbilar() {
               <div>Oops! Could not find any trademarks :(</div>
             )}
           </GridListCardBrands>
+        </div>
+      </PageSection>
+      <PageSection id="section-trial-runs" heading="Provkörningar">
+        <div className={overflowControlClass}>
+          <GridListCardTrialRuns>
+            {trialRuns.length > 0 ? (
+              trialRuns
+            ) : (
+              <div>Oops! Could not find any videos :(</div>
+            )}
+          </GridListCardTrialRuns>
         </div>
       </PageSection>
     </Page>

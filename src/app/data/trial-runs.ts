@@ -1,5 +1,5 @@
 
-const provkorningar = [
+export const provkorningar = [
     {
         model: "Tesla Model S",
         imgSrc: "tesla-models.png"

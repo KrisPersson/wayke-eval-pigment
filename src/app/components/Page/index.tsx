@@ -3,6 +3,7 @@ import { size } from "../../layout/helpers";
 import Container from "../Container/index";
 import Link from "next/link";
 import Image from "next/image";
+import Subheader from "../Subheader/index";
 
 const pageClass = css({
   marginBlock: size(8),
@@ -27,6 +28,7 @@ const showMoreLinkClass = css(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: size(1),
+  whiteSpace: "nowrap",
 }));
 
 const sectionHeaderClass = css({
