@@ -11,6 +11,12 @@ export const parsePrice = (price: number) => {
   let counter = 0;
 
   for (let i = arr.length; i > 0; i--) {
-    newArr.push();
+    newArr.unshift(arr[i - 1]);
+    counter++;
+    if (counter === 3 && i > 1) {
+      newArr.unshift(" ");
+      counter = 0;
+    }
   }
+  return newArr.join("");
 };

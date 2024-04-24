@@ -11,6 +11,14 @@ export const theme = extendTheme({
       Lg: "@media (min-width: 1200px)",
       LtLg: "@media (max-width: 1199px)",
     },
+    colors: {
+      backgroundGrey: "rgba(246, 246, 246, 1)",
+      foregroundGrey: "rgba(236, 236, 235, 1)",
+      textPrimary: "rgba(40, 40, 40, 1)",
+      textSecondary: "rgba(72, 72, 72, 1)",
+      dangerRed: "rgba(246, 67, 43, 1)",
+      baseWhite: "rgba(255, 255, 255, 1)"
+    },
     font: {
       family: {
         main: "DM Sans, sans-serif",

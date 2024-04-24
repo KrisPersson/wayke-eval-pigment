@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { OpenSauceOne } from "./fonts/index";
+import { OpenSauceOne, StyreneA } from "./fonts/index";
 import "@pigment-css/react/styles.css";
 import "./globals.css";
 import { css } from "@pigment-css/react";
@@ -10,12 +10,16 @@ export const metadata: Metadata = {
   description: "Project to test and evaluate Pigment CSS",
 };
 
-const bodyClass = css({
-  margin: 0,
+const bodyClass = css(({ theme }) => ({
+  margin: "0 auto",
   minHeight: "100vh",
+  maxWidth: "1600px",
   display: "flex",
   flexDirection: "column",
-});
+  color: theme.colors.textPrimary,
+  backgroundColor: theme.colors.backgroundGrey,
+  fontFamily: "var(--font-open-sauce)",
+}));
 
 export default function RootLayout({
   children,
@@ -24,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${OpenSauceOne.className} ${bodyClass}`}>
+      <body
+        className={`${OpenSauceOne.variable} ${StyreneA.variable} ${bodyClass}`}
+      >
         <Header />
         {children}
       </body>

@@ -4,48 +4,48 @@ export const trademarks = [
         name: "Volvo",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "volvo-tm.png"
+        iconSrc: "volvo-tm.svg"
     },
     {
         name: "BMW",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "bmw-tm.png"
+        iconSrc: "bmw-tm.svg"
     },
     {
         name: "Volkswagen",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "volkswagen-tm.png"
+        iconSrc: "volkswagen-tm.svg"
     },
     {
         name: "Audi",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "audi-tm.png"
+        iconSrc: "audi-tm.svg"
     },
     {
         name: "Škoda",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "skoda-tm.png"
+        iconSrc: "skoda-tm.svg"
     },
     {
         name: "Toyota",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "toyota-tm.png"
+        iconSrc: "toyota-tm.svg"
     },
     {
         name: "Renault",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "renault-tm.png"
+        iconSrc: "renault-tm.svg"
     },
     {
         name: "Tesla",
         numCars: 1040,
         numModels: 7,
-        iconSrc: "tesla-tm.png"
+        iconSrc: "tesla-tm.svg"
     }
 ]
