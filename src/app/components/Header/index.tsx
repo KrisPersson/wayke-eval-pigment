@@ -18,7 +18,12 @@ export default function Header() {
     <header className={headerClass}>
       <Container>
         <div className={innerClass}>
-          <Image src="/logo/wayke.svg" width={189} height={42} />
+          <Image
+            src="/logo/wayke.svg"
+            width={189}
+            height={42}
+            alt="Wayke logo"
+          />
           <Navigation />
         </div>
       </Container>

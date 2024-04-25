@@ -41,7 +41,11 @@ export default function Elbilar() {
         breadcrumbs={crumbs}
         anchorLinks={anchorLinks}
       />
-      <PageSection id="section-popular-models" heading="Populära modeller">
+      <PageSection
+        id="section-popular-models"
+        heading="Populära modeller"
+        aria-label="Populära modeller"
+      >
         <div className={overflowControlClass}>
           <GridListCardProducts>
             {popModelsProducts.length > 0 ? (
@@ -55,6 +59,7 @@ export default function Elbilar() {
       <PageSection
         id="section-go-far-models"
         heading="Elbilar som tar dig långt"
+        aria-label="Elbilar som tar dig långt"
         showMoreLink
       >
         <div className={overflowControlClass}>
@@ -67,7 +72,11 @@ export default function Elbilar() {
           </GridListCardProducts>
         </div>
       </PageSection>
-      <PageSection id="section-trademarks" heading="Varumärken">
+      <PageSection
+        id="section-trademarks"
+        heading="Varumärken"
+        aria-label="Varumärken"
+      >
         <div className={overflowControlClass}>
           <GridListCardBrands>
             {trademarkBrands.length > 0 ? (
@@ -78,7 +87,11 @@ export default function Elbilar() {
           </GridListCardBrands>
         </div>
       </PageSection>
-      <PageSection id="section-trial-runs" heading="Provkörningar">
+      <PageSection
+        id="section-trial-runs"
+        heading="Provkörningar"
+        aria-label="Provkörningar"
+      >
         <div className={overflowControlClass}>
           <GridListCardTrialRuns>
             {trialRuns.length > 0 ? (

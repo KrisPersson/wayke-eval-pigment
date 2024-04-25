@@ -3,7 +3,7 @@ import { size } from "../../layout/helpers";
 import { IBreadcrumb } from "../../types/index";
 
 interface IisActive {
-  isActive: boolean;
+  isactive: boolean;
 }
 
 const listClass = css({
@@ -16,9 +16,9 @@ const listClass = css({
 
 const CrumbLink = styled("a")(({ theme }) => ({
   color: theme.colors.textSecondary,
-  textDecoration: ({ isActive }: IisActive) =>
-    isActive ? "none" : "underline",
-  cursor: ({ isActive }: IisActive) => (isActive ? "default" : "pointer"),
+  textDecoration: ({ isactive }: IisActive) =>
+    isactive ? "none" : "underline",
+  cursor: ({ isactive }: IisActive) => (isactive ? "default" : "pointer"),
 }));
 
 export default function Breadcrumbs({
@@ -35,7 +35,7 @@ export default function Breadcrumbs({
               <CrumbLink
                 href={breadcrumb.href}
                 disabled={breadcrumb.active}
-                isActive={breadcrumb.active}
+                isactive={breadcrumb.active}
               >
                 {breadcrumb.label}
               </CrumbLink>

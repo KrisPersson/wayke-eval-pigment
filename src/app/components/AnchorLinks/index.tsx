@@ -1,6 +1,6 @@
 import { IAnchorLink } from "../../types/index";
 import Link from "next/link";
-import { css, styled } from "@pigment-css/react";
+import { css } from "@pigment-css/react";
 import { size } from "../../layout/helpers";
 
 const ulClass = css(({ theme }) => ({
