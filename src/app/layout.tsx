@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const bodyClass = css(({ theme }) => ({
   margin: "0 auto",
   minHeight: "100vh",
-  maxWidth: "1600px",
+  maxWidth: "1460px",
   display: "flex",
   flexDirection: "column",
   color: theme.colors.textPrimary,

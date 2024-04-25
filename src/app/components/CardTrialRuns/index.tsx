@@ -51,16 +51,10 @@ const showVideoClass = css(({ theme }) => ({
   fontSize: "0.75rem",
   lineHeight: "1.33",
   color: theme.colors.textSecondary,
+  textDecoration: "underline",
   display: "flex",
   alignItems: "center",
   gap: size(0.5),
-}));
-
-const DotDivider = styled("div")(({ theme }) => ({
-  width: "4px",
-  height: "4px",
-  borderRadius: "100vmax",
-  backgroundColor: theme.colors.textSecondary,
 }));
 
 export default function CardTrialRuns({
@@ -84,15 +78,17 @@ export default function CardTrialRuns({
           <p className={pClass}>Provkörning</p>
           <h3 className={h3Class}>{title}</h3>
         </div>
-        <Link href="#" className={showVideoClass}>
+        <p className={showVideoClass}>
           Visa video
           <Image
             className={arrowIconClass}
             src="/icons/arrow-right.svg"
             width={24}
             height={24}
+            alt="Arrow right icon"
+            aria-hidden
           />
-        </Link>
+        </p>
       </div>
     </article>
   );

@@ -23,7 +23,8 @@ export const StyreneA = localFont({
       path: './styreneaweb-medium/styreneaweb-medium.ttf',
       weight: '500',
       style: 'normal',
-    } ],
+    } 
+  ],
   variable: '--font-styrene'
 })
 

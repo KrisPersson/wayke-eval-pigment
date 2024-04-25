@@ -11,10 +11,6 @@ interface IPageHeaderProps {
   anchorLinks: IAnchorLink[];
 }
 
-const wrapperClass = css({
-  padding: "2px",
-});
-
 const innerClass = css({
   display: "flex",
   flexDirection: "column",
@@ -42,7 +38,7 @@ export default function Subheader({
   anchorLinks,
 }: IPageHeaderProps) {
   return (
-    <div className={wrapperClass} aria-label="Page Header">
+    <div aria-label="Page Header">
       <Container>
         <div className={innerClass}>
           <Breadcrumbs breadcrumbs={breadcrumbs} />

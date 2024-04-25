@@ -3,13 +3,17 @@ import Link from "next/link";
 import { css, styled } from "@pigment-css/react";
 import { size } from "../../layout/helpers";
 
-const ulClass = css({
+const ulClass = css(({ theme }) => ({
   paddingLeft: 0,
   margin: 0,
   listStyle: "none",
   display: "flex",
+  flexDirection: "column",
   gap: size(2),
-});
+  [theme.breakpoint.Sm]: {
+    flexDirection: "row",
+  },
+}));
 
 const linkClass = css(({ theme }) => ({
   color: theme.colors.textSecondary,

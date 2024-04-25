@@ -18,10 +18,6 @@ const cardBrandClass = css(({ theme }) => ({
   borderRadius: size(2.25),
 }));
 
-const imgWrapperClass = css({
-  overflow: "hidden",
-});
-
 const imgClass = css({
   gridColumn: "1 / span 1",
   alignSelf: "center",
@@ -99,6 +95,8 @@ export default function CardBrand({
         src="/icons/arrow-right.svg"
         width={20}
         height={20}
+        alt="Arrow right icon"
+        aria-hidden
       />
     </article>
   );

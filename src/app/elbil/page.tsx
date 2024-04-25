@@ -1,16 +1,15 @@
 import { Page, PageSection } from "../components/Page/index";
 import { UlGrid } from "../components/Grid/index";
 import { css, styled } from "@pigment-css/react";
-import CardProduct from "../components/CardProduct/index";
-import CardBrand from "../components/CardBrand/index";
-import CardTrialRuns from "../components/CardTrialRuns/index";
-import { elbilar } from "../data/products";
-import { trademarks } from "../data/trademarks";
-import { provkorningar } from "../data/trial-runs";
-import { parsePrice } from "../layout/helpers";
+import {
+  popModelsProducts,
+  goFarModelsProducts,
+  trademarkBrands,
+  trialRuns,
+} from "./cards";
 import Subheader from "../components/Subheader/index";
-import { anchorLinks } from "./anchor-links";
-import { crumbs } from "./breadcrumbs";
+import { anchorLinks } from "./data/anchor-links";
+import { crumbs } from "./data/breadcrumbs";
 
 const GridListCardProducts = styled(UlGrid)`
   > * {
@@ -32,60 +31,6 @@ const GridListCardTrialRuns = styled(UlGrid)`
 
 const overflowControlClass = css({
   overflow: "scroll",
-});
-
-const popModelsProducts = elbilar.popular.map((item, i: number) => {
-  return (
-    <li key={i}>
-      <CardProduct
-        imgSrc={`/photos/cars/electric/${item.imgSrc}`}
-        imgAlt={`Image of a ${item.model} with a scenic background`}
-        title={item.model}
-        numListings={item.numListings}
-        lowestPrice={parsePrice(item.lowestPrice) as string}
-      />
-    </li>
-  );
-});
-
-const goFarModelsProducts = elbilar.goFar.map((item, i: number) => {
-  return (
-    <li key={i}>
-      <CardProduct
-        imgSrc={`/photos/cars/electric/${item.imgSrc}`}
-        imgAlt={`Image of a ${item.model} with a scenic background`}
-        title={item.model}
-        numListings={item.numListings}
-        lowestPrice={parsePrice(item.lowestPrice) as string}
-      />
-    </li>
-  );
-});
-
-const trademarkBrands = trademarks.map((item, i: number) => {
-  return (
-    <li key={i}>
-      <CardBrand
-        imgSrc={`/icons/trademarks/${item.iconSrc}`}
-        imgAlt={`${item.name} with a scenic background`}
-        title={item.name}
-        numCars={item.numCars}
-        numModels={item.numModels}
-      />
-    </li>
-  );
-});
-
-const trialRuns = provkorningar.map((item, i: number) => {
-  return (
-    <li key={i}>
-      <CardTrialRuns
-        imgSrc={`/photos/trialruns/${item.imgSrc}`}
-        imgAlt={`${item.model}`}
-        title={item.model}
-      />
-    </li>
-  );
 });
 
 export default function Elbilar() {

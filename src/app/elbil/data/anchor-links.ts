@@ -5,7 +5,7 @@ export const anchorLinks = [
       href: "#section-popular-models",
     },
     {
-      label: "El bilar med lång räckvidd",
+      label: "Elbilar med lång räckvidd",
       href: "#section-go-far-models",
     },
     {

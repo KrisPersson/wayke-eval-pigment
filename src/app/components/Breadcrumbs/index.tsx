@@ -1,6 +1,5 @@
 import { css, styled } from "@pigment-css/react";
 import { size } from "../../layout/helpers";
-import Link from "next/link";
 import { IBreadcrumb } from "../../types/index";
 
 interface IisActive {
@@ -32,18 +31,16 @@ export default function Breadcrumbs({
       <ol className={listClass}>
         {breadcrumbs.map((breadcrumb, i: number) => {
           return (
-            <>
-              <li key={breadcrumb.href} aria-current={breadcrumb.active}>
-                <CrumbLink
-                  href={breadcrumb.href}
-                  disabled={breadcrumb.active}
-                  isActive={breadcrumb.active}
-                >
-                  {breadcrumb.label}
-                </CrumbLink>
-              </li>
-              {i < breadcrumbs.length - 1 && <span key={i}>/</span>}
-            </>
+            <li key={breadcrumb.href} aria-current={breadcrumb.active}>
+              <CrumbLink
+                href={breadcrumb.href}
+                disabled={breadcrumb.active}
+                isActive={breadcrumb.active}
+              >
+                {breadcrumb.label}
+              </CrumbLink>
+              {i < breadcrumbs.length - 1 && <span key={i}> /</span>}
+            </li>
           );
         })}
       </ol>

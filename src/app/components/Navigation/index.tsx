@@ -13,17 +13,17 @@ const navClass = css({
   alignItems: "center",
 });
 
-const primaryUlClass = css({
+const primaryUlClass = css(({ theme }) => ({
   paddingLeft: 0,
   margin: 0,
   listStyle: "none",
   display: "flex",
   alignItems: "center",
   gap: size(3),
-  "@media (max-width: 699px)": {
+  [theme.breakpoint.LtMd]: {
     display: "none",
   },
-});
+}));
 
 const secondaryUlClass = css({
   paddingLeft: 0,
@@ -46,8 +46,9 @@ const LinkDivider = styled.div(({ theme }) => ({
   borderLeft: `1px solid ${theme.colors.foregroundGrey}`,
   height: size(5.25),
   ariaHidden: true,
-  "@media (max-width: 399px)": {
-    display: "none",
+  display: "none",
+  [theme.breakpoint.Sm]: {
+    display: "block",
   },
 }));
 

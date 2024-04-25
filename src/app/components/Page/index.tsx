@@ -3,10 +3,9 @@ import { size } from "../../layout/helpers";
 import Container from "../Container/index";
 import Link from "next/link";
 import Image from "next/image";
-import Subheader from "../Subheader/index";
 
 const pageClass = css({
-  marginBlock: size(8),
+  marginBottom: size(8),
   display: "flex",
   flexDirection: "column",
   rowGap: size(8),
@@ -72,6 +71,8 @@ export function PageSection({
                 src="/icons/arrow-right.svg"
                 width={24}
                 height={24}
+                alt="Arrow-right icon"
+                aria-hidden
               />
             </Link>
           )}
