@@ -16,15 +16,13 @@ const listClass = css({
 
 const CrumbLink = styled("a")(({ theme }) => ({
   color: theme.colors.textSecondary,
+  cursor: "pointer",
+  textDecoration: "underline",
 
   variants: [
     {
       props: (props) => props.isactive,
       style: { cursor: "default", textDecoration: "none" },
-    },
-    {
-      props: (props) => !props.isactive,
-      style: { cursor: "pointer", textDecoration: "underline" },
     },
   ],
 }));
