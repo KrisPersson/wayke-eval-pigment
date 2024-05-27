@@ -9,5 +9,5 @@ export const UlGrid = styled.ul`
   padding-left: 0;
   margin: 0;
   list-style: none;
-  gap: ${size(2)};
+  gap: 16px;
 `;
