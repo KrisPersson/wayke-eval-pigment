@@ -1,8 +1,17 @@
 :root {
     --gutter: 20px;
     --subheader-gap: 32px;
+    
+    --border-active: var(--c-primary-darker);
+
 
     @media (min-width: 1350px) {
     --gutter: 80px;
     }
+
+
 }
+
+
+
+

@@ -41,6 +41,7 @@ const h3Class = css({
 const pClass = css({
   margin: 0,
   fontSize: "0.875rem",
+  maxWidth: "40ch",
 });
 
 export default function CardProduct({

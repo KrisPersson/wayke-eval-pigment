@@ -82,6 +82,7 @@ export default function Navigation() {
                 src="/icons/header/icon-search.png"
                 width={32}
                 height={32}
+                quality={100}
                 alt="Search-icon"
               />
             </Link>
@@ -93,6 +94,7 @@ export default function Navigation() {
                 src="/icons/header/icon-user.png"
                 width={32}
                 height={32}
+                quality={100}
                 alt="User-icon"
               />
             </Link>
@@ -104,6 +106,7 @@ export default function Navigation() {
                 src="/icons/header/icon-hamburger.png"
                 width={32}
                 height={32}
+                quality={100}
                 alt="Hamburger menu-icon"
               />
             </Link>
