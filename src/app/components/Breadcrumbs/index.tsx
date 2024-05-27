@@ -14,7 +14,7 @@ const listClass = css({
   gap: size(0.5),
 });
 
-const CrumbLink = styled("a")<IisActive>(({ theme }) => ({
+const CrumbLink = styled("a")(({ theme }) => ({
   color: theme.colors.textSecondary,
 
   variants: [
