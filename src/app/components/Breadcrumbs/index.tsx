@@ -14,8 +14,8 @@ const listClass = css({
   gap: size(0.5),
 });
 
-const CrumbLink = styled("a")<IisActive>({
-  color: "black",
+const CrumbLink = styled("a")(({ theme }) => ({
+  color: theme.colors.textSecondary,
   cursor: "pointer",
   textDecoration: "underline",
 
@@ -25,7 +25,7 @@ const CrumbLink = styled("a")<IisActive>({
       style: { cursor: "default", textDecoration: "none" },
     },
   ],
-});
+}));
 
 export default function Breadcrumbs({
   breadcrumbs,
