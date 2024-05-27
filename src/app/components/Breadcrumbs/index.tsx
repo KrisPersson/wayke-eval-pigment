@@ -16,13 +16,15 @@ const listClass = css({
 
 const CrumbLink = styled("a")(({ theme }) => ({
   color: theme.colors.textSecondary,
-  cursor: "pointer",
-  textDecoration: "underline",
 
   variants: [
     {
-      props: (props) => props.isactive,
+      props: { isactive: "active" },
       style: { cursor: "default", textDecoration: "none" },
+    },
+    {
+      props: { isactive: "not" },
+      style: { cursor: "pointer", textDecoration: "underline" },
     },
   ],
 }));
@@ -38,7 +40,10 @@ export default function Breadcrumbs({
         {breadcrumbs.map((breadcrumb, i: number) => {
           return (
             <li key={breadcrumb.href} aria-current={breadcrumb.active}>
-              <CrumbLink href={breadcrumb.href} isactive={breadcrumb.active}>
+              <CrumbLink
+                href={breadcrumb.href}
+                isactive={breadcrumb.active ? "active" : "not"}
+              >
                 {breadcrumb.label}
               </CrumbLink>
               {i < breadcrumbs.length - 1 && <span key={i}> /</span>}
