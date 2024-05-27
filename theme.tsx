@@ -1,8 +1,6 @@
-import { extendTheme } from "@pigment-css/nextjs-plugin";
-
 import type { ExtendTheme } from "@pigment-css/react/theme";
 
-export const theme = extendTheme({
+export const theme = {
   breakpoint: {
     Sm: "@media (min-width: 600px)",
     LtSm: "@media (max-width: 599px)",
@@ -39,7 +37,7 @@ export const theme = extendTheme({
     baseUnit: "8px",
     containerMaxWidth: "1496px",
   },
-});
+};
 
 export type Theme = typeof theme;
 
