@@ -3,9 +3,7 @@ import Link from "next/link";
 import { css } from "@pigment-css/react";
 import { size } from "../../layout/helpers";
 
-import { Theme } from "../../../../theme";
-
-const ulClass = css(({ theme }: Theme) => ({
+const ulClass = css(({ theme }) => ({
   paddingLeft: 0,
   margin: 0,
   listStyle: "none",
@@ -17,7 +15,7 @@ const ulClass = css(({ theme }: Theme) => ({
   },
 }));
 
-const linkClass = css(({ theme }: Theme) => ({
+const linkClass = css(({ theme }) => ({
   color: theme.colors.textSecondary,
 }));
 

@@ -1,5 +1,7 @@
 import { extendTheme } from "@pigment-css/nextjs-plugin";
 
+import type { ExtendTheme } from "@pigment-css/react/theme";
+
 export const theme = extendTheme({
   breakpoint: {
     Sm: "@media (min-width: 600px)",
@@ -40,3 +42,12 @@ export const theme = extendTheme({
 });
 
 export type Theme = typeof theme;
+
+declare module "@pigment-css/react/theme" {
+  interface ThemeArgs {
+    theme: ExtendTheme<{
+      colorScheme: "light" | "dark";
+      tokens: Theme;
+    }>;
+  }
+}
