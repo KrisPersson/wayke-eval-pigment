@@ -3,7 +3,7 @@ import { size } from "../../layout/helpers";
 import { IBreadcrumb } from "../../types/index";
 
 interface IisActive {
-  isactive: boolean;
+  isactive: boolean | undefined;
 }
 
 const listClass = css({
