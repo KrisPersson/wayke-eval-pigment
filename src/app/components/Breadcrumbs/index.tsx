@@ -3,7 +3,7 @@ import { size } from "../../layout/helpers";
 import { IBreadcrumb } from "../../types/index";
 
 interface IisActive {
-  isactive: boolean | undefined;
+  isactive: boolean;
 }
 
 const listClass = css({
@@ -14,7 +14,7 @@ const listClass = css({
   gap: size(0.5),
 });
 
-const CrumbLink = styled("a")(({ theme }) => ({
+const CrumbLink = styled("a")<IisActive>(({ theme }) => ({
   color: theme.colors.textSecondary,
 
   variants: [
