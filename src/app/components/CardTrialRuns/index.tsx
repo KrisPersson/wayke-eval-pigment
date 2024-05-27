@@ -1,7 +1,5 @@
 import { css, styled } from "@pigment-css/react";
 import { size } from "../../layout/helpers";
-import Image from "next/image";
-import Link from "next/link";
 
 interface ICardTrialRunsProps {
   imgSrc: string;
@@ -65,13 +63,7 @@ export default function CardTrialRuns({
   return (
     <article className={cardTrialRunsClass}>
       <div className={imgWrapperClass}>
-        <Image
-          width={632}
-          height={250}
-          src={imgSrc}
-          alt={imgAlt}
-          className={imgClass}
-        />
+        <img src={imgSrc} alt={imgAlt} className={imgClass} />
       </div>
       <div className={infoBoxClass}>
         <div>
@@ -80,11 +72,9 @@ export default function CardTrialRuns({
         </div>
         <p className={showVideoClass}>
           Visa video
-          <Image
+          <img
             className={arrowIconClass}
             src="/icons/arrow-right.svg"
-            width={24}
-            height={24}
             alt="Arrow right icon"
             aria-hidden
           />
